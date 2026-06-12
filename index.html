@@ -7,7 +7,7 @@
     <meta name="title" content="Happy Birthday Website 2.0 | Aoudumber Bade">
     <meta name="github" content="https://github.com/Aoudumber-Bade">
     <title>Areesha Afridi Birthday</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=2">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -137,19 +137,38 @@
                     </div>
                 </div>
                 <div class="card2">
-                    <div class="card2-content">
-                        <h3>To You!</h3>
-                        <h2>Happy birthday 🥳🎂🥳 chanda the day you come into my life I was not really much attached to
-                            you but day by day you became close to my heart . And now you are truly my younger sister. I
-                            wish I could remove some of the pain from your life which you are bearing alone. But you're
-                            always welcome 🤗 you can talk anytime you want to talk specially those which you can't say
-                            to others. And this year your all dreams come true . I wish that your
-                            brother could wish you but if couldn't wish on him behalf I am wishing you happy birthday
-                            🎈🎂🎈 sana . Don't be Sad ok be happy 😌
-                        </h2>
-
-                        <div class="imageCute2">
-                            <img src="cute2.png" alt="">
+                    <div class="card-pages-container">
+                        <div class="card2-content page1 active">
+                            <h3>To You!</h3>
+                            <h2>HAPPY BIRTHDAY AREESHA🎉🎊🥳❤️On this special I sent you a little gift and may Allah
+                                bless
+                                you with happiness and May Allah fulfil all your wishes Happy Birthday, my love You are
+                                my
+                                everything, and I'm so lucky to have you in my life.Thank you for being my partner, my
+                                best
+                                friend, and my greatest joy.May your special day be filled with happiness and all the
+                                things
+                                that make your heart smile.Areesha I love you for all that you are and all that you have
+                                been and all that you will be whether you respect me or disrespect you I really love you
+                                in
+                                all phases of your life mera bacha Motu
+                            </h2>
+                            <div class="btn-container">
+                                <button class="btn-next">Next Page <i class="fa-solid fa-chevron-right"></i></button>
+                            </div>
+                        </div>
+                        <div class="card2-content page2">
+                            <h3>Our Story!</h3>
+                            <h2>I still remember the very first time we met, how i fell in love with you and your
+                                smile and how everything happened unexpectedly. We both didn't expect, it was Allah
+                                who made it happen, because he knows we both need each other to complete the love
+                                story he made. I am beyond blessed and thankful that someone like you came into my
+                                life. Thank you... thank you for making me realize and making me feel that I deserve
+                                to be loved to be happy and to have someone as amazing as you are
+                            </h2>
+                            <div class="btn-container">
+                                <button class="btn-prev"><i class="fa-solid fa-chevron-left"></i> Previous Page</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -159,7 +178,7 @@
 
 </body>
 <script>
-    let datetxt = "27 May";
+    let datetxt = "14 June";
     let datatxtletter = "My love. You are a very special girl. I always silently thank you for coming into my life. Today, I wish you all the best, lots of health, and lots of joy. I always hope we will celebrate many more birthdays like this together. Happy birthday to you.💕";
     let titleLetter = "To you";
     let charArrDate = datetxt.split('');
@@ -256,8 +275,22 @@
     }
 
     close.addEventListener('click', function () {
-        boxmail.classList.remove('active')
-    })
+        boxmail.classList.remove('active');
+        $('.card2-content.page1').addClass('active');
+        $('.card2-content.page2').removeClass('active');
+    });
+
+    $(document).on('click', '.btn-next', function (e) {
+        e.stopPropagation();
+        $('.card2-content.page1').removeClass('active');
+        $('.card2-content.page2').addClass('active');
+    });
+
+    $(document).on('click', '.btn-prev', function (e) {
+        e.stopPropagation();
+        $('.card2-content.page2').removeClass('active');
+        $('.card2-content.page1').addClass('active');
+    });
 </script>
 
 </html>
